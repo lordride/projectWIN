@@ -10,6 +10,7 @@
         <meta name="author" content="Edir R.M.">
     <title>Kiling Spree</title>
          <script type="text/javascript" src="script.js" ></script>
+    <script src="jquery.js"></script>
             <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
