@@ -2,6 +2,7 @@
     background-color: #ffffff;
     width:auto;
     height:auto;
+
 }
 .content_top{
     width:100%;
@@ -12,5 +13,11 @@
 .﻿body,text{
     color: #000000;
     text-align:center;
-    
+}
+.pagina{
+    width: 600px;
+    height: 600px;
+    border: solid;
+    margin: auto;
+
 }
