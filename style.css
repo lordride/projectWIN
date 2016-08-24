@@ -1,23 +1,30 @@
-.﻿body,html{
+.﻿body,html,body{
     background-color: #ffffff;
     width:auto;
     height:auto;
-
+    text-align: center;
 }
 .content_top{
     width:100%;
     height:20%;
     background-color: #436fff;
     text-align:center;
-}
-.﻿body,text{
-    color: #000000;
-    text-align:center;
+    border: solid;
 }
 .pagina{
-    width: 600px;
-    height: 600px;
-    border: solid;
-    margin: auto;
 
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    border: solid;
+    background-color: #9acfea;
 }
+.page{
+    text-decoration-color: #0f0f0f;
+}
+.button{
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
