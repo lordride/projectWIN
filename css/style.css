@@ -15,37 +15,19 @@
     background-color: #000000;
     text-align: center;
 }
-#page{
+#pagina1{
     width: 100%;
     margin-top: auto;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
+    background-color: #2aabd2;
+}
+#bloco1{
+    width: auto;
+    height: auto;
+    text-align: left;
+    color: #2aabd2;
     background-color: #9acfea;
 }
-#button{
-    position: relative;
-    left: auto;
-    top: auto;
-    right: auto;
-    bottom: auto;
-}
-#pagina1{
-    color: #2aabd2;
-    background-color: #000000;
-}
-#pagina2{
-    color: #2aabd2;
-    background-color: #000000;
-}
-#pagina3{
-    color: #2aabd2;
-    margin-top: auto;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    background-color: #000000;
-}
-#pagina4 {
-    background-color: #000000;
-}
+
