@@ -13,32 +13,32 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-        <script type="text/javascript" src="jquery-3.1.0.js" ></script>
-            <script src="script.js"></script>
+        <script type="text/javascript" src="js/jquery-3.1.0.js" ></script>
+            <script src="js/script.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 
 <body>
 
     <form>
-        <div class="content_top">
+        <div class="container" id="container1" >
             <br><h1>Aprendendo a Futucar</h1><br>
         </div>
 
-        <div class="data">
-            <h2>Dia de conclusão de teste do novo funcionario ITM</h2>
-                <input type="datetime-local" class="data">
-        </div>
-            <h3>De um click no botão open para abrir o site.<br></h3>
+        <div class="container" id="container2">
+        <div class="row">
 
-            <input type="button" id="button" value="OPEN!">
-
-        <div class="pagina">
+            <div class="col-md-12" id="pagina1">
+                <input type="button" class="button" id="button1" value="INICIO">
+                <input type="button" class="button" id="button2" value="CRONOMETRO">
+                <input type="button" class="button" id="button3" value="CODIGO">
+            </div>
         </div>
+        </div>
+        <div class="container" id="page"></div>
     </form>
-
 </body>
 
 </html>
