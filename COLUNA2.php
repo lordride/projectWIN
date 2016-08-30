@@ -7,12 +7,11 @@
 <body>
 
 <form>
-    <div>
-        <input type="datetime-local" class="fimDoTeste" id="cronometro">
+    <div class="container" id="cronometro">
+        <br><h2>Tempo estimado para termino</h2><br>
+        
     </div>
 </form>
-
-
 
 </body>
 </html>

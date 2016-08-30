@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('#button1').click(function() {
         $.get('http://localhost:63342/projectWIN/INICIO.php', function (data) {
-            $('#pagina').html(data);
+            $('#pagina').html(data);        
         });
     });
 });
@@ -19,3 +19,4 @@ $(document).ready(function () {
         });
     });
 });
+
