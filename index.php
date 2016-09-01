@@ -18,18 +18,20 @@
     <script src="js/script.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    
 </head>
 
-<body>
-        <figure id="img">
-            <img src="/icones/deathwing.jpg" alt="deathwing">
-        </figure>
-    <header><!--cabeçalho-->
-        <h1 id="titulo">Hello</h1>
-        <p>Welcome</p>
+<body class="container" id="body">
 
-        <nav>
+    <header class="cabecalho"><!--cabeçalho-->
+        <div class="container" id="titulo">
+            <h1>Hello</h1>
+        </div>
+        <div class="row" id="bemVindo">
+            <h2><p>Welcome</p></h2>
+        </div>
+        <div class="navBar">
+        <nav id="menuTOP">
             <ul>
                 <li>
                     <a href="#">Wallpappers</a>
@@ -40,8 +42,9 @@
                 </li>
             </ul>
         </nav>
-
+        </div>
     </header>
+
         <section id="main"><!--conteudo principal-->
 
         </section>
@@ -49,7 +52,7 @@
 
         </section>
 
-    <footer><!--rodape-->
+    <footer class="rodape"><!--rodape-->
 
     </footer>
 </body>
