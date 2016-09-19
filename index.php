@@ -46,10 +46,86 @@
     </header>
 
         <section id="main"><!--conteudo principal-->
+            <pre>
+            <?php
+            require_once 'poo.php';
+        echo "</br>";
+            $ca = new Carro();
+            $ca->ano = "1990";
+            $ca->marca = "BMW";
+            $ca->modelo = "s35";
+            $ca->estado = "usado";
+            $ca->garantia = false;
+            $ca->vendas();
+            $ca->chekup();
+            $ca->estadoCarro();
+         var_dump($ca);
 
+         echo "</br>";
+            $ca = new Carro();
+            $ca->ano = "2016";
+            $ca->marca = "BMW";
+            $ca->modelo = "V350";
+            $ca->estado = "novo";
+            $ca->garantia = true;
+            $ca->vendas();
+            $ca->chekup();
+            $ca->estadoCarro();
+         var_dump($ca);
+            ?>
+            </pre>
         </section>
         <section id="destaques"><!--conteudo em destaque-->
+            <pre>
+            <?php
+                require_once 'poo.php';
+            echo "</br>";
+            
+            // $c1 = new Caneta("BIC", "Azul", "0.5");     metodo construtor
+            // $c2 = new Caneta("ZIG", "preta", "1.0");     metodo construtor
+            
+                $c1 = new Caneta();
+                $c1->setCor("azul");
+                $c1->setPonta(0.5);
+                $c1->setModelo("BIC");
+                $c1->tampada = false;
+                $c1->destampar();
+                $c1->rabiscar();
+            
+            //var_dump($c1);      pode usar o var_dump ou print_r
+            //var_dump($c2);
+            
+            var_dump($c1);
 
+            echo "</br>";
+                $c2 = new Caneta();
+                $c2->setCor("verde");
+                $c2->carga = 60;
+                $c2->tampada = true;
+                $c2->tampar();
+                $c2->rabiscar();
+                $c2->carga();
+            var_dump($c2);
+
+            echo "</br>";
+                $c3 = new Caneta();
+                $c3->setCor("preta");
+                $c3->setPonta(1.0);
+                $c3->setModelo("ZIG");
+                $c3->carga = 10;
+                $c3->destampar();
+                $c3->rabiscar();
+                $c3->carga();
+            var_dump($c3);
+
+            echo "</br>";
+
+            print "Eu tenho uma caneta {$c1->getModelo()} de ponta {$c1->getPonta()}";
+
+            echo "</br>";
+
+            ?>
+            </pre>
         </section>
 
     <footer class="rodape"><!--rodape-->
