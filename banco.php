@@ -32,6 +32,7 @@ class Banco{
 
         if ($this->getStatus() == true){
             $this->setSaldo($this->getSaldo() + $valor);
+            echo "<p>Deposito de $valor na conta de " . $this->getDono() . "</p>";
         }else{
             echo "<p>impossivel depositar!</p>";
         }
@@ -40,6 +41,7 @@ class Banco{
         if ($this->getStatus() == true) {
             if ($this->getSaldo() > $valor) {
                 $this->setSaldo($this->getSaldo() - $valor);
+                echo "<p>" . $this->getDono() . " sacou $valor de sua conta. </p>";
             }else{
                 echo "<p>saldo insuficiente!</p>";
             }
@@ -47,19 +49,18 @@ class Banco{
             echo "<p>impossivel sacar!</p>";
         }
     }
-    public function pagarMensal($valor){
+    public function pagarMensal(){
 
         if ($this->getTipo() == "CC"){
             $valor = 12;
         }elseif($this->getTipo() == "CP"){
             $valor = 20;
         }
-        if ($status = true){
-            if ($this->getSaldo() > $valor){
-                $this->setSaldo($this->getSaldo() - $valor);
+        if ($this->getStatus() == true){
+            $this->setSaldo($this->getSaldo() - $valor);
+                echo "<p> A mensalidade de $valor foi debitada da conta " . $this->getNumConta() . " de " . $this->getDono() . "</p>";
             }else{
                 echo "<p>impossivel efetuar o pagamento!</p>";
-            }
         }
     }
 
