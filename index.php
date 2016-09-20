@@ -51,11 +51,11 @@
             require_once 'poo.php';
         echo "</br>";
             $ca = new Carro();
-            $ca->ano = "1990";
-            $ca->marca = "BMW";
-            $ca->modelo = "s35";
-            $ca->estado = "usado";
-            $ca->garantia = false;
+            $ca->setAno("1990");
+            $ca->setMarca("BMW");
+            $ca->setModelo("s35");
+            $ca->setEstado("usado");
+            $ca->setGarantia(false);
             $ca->vendas();
             $ca->chekup();
             $ca->estadoCarro();
@@ -63,11 +63,11 @@
 
          echo "</br>";
             $ca = new Carro();
-            $ca->ano = "2016";
-            $ca->marca = "BMW";
-            $ca->modelo = "V350";
-            $ca->estado = "novo";
-            $ca->garantia = true;
+            $ca->setAno("2016");
+            $ca->setMarca("BMW");
+            $ca->setModelo("V350");
+            $ca->setEstado("novo");
+            $ca->setGarantia(true);
             $ca->vendas();
             $ca->chekup();
             $ca->estadoCarro();
@@ -79,29 +79,26 @@
             <pre>
             <?php
                 require_once 'poo.php';
+
             echo "</br>";
-            
             // $c1 = new Caneta("BIC", "Azul", "0.5");     metodo construtor
             // $c2 = new Caneta("ZIG", "preta", "1.0");     metodo construtor
-            
                 $c1 = new Caneta();
                 $c1->setCor("azul");
                 $c1->setPonta(0.5);
                 $c1->setModelo("BIC");
-                $c1->tampada = false;
+                $c1->setTampada(false);
                 $c1->destampar();
                 $c1->rabiscar();
-            
             //var_dump($c1);      pode usar o var_dump ou print_r
             //var_dump($c2);
-            
             var_dump($c1);
 
             echo "</br>";
                 $c2 = new Caneta();
                 $c2->setCor("verde");
-                $c2->carga = 60;
-                $c2->tampada = true;
+                $c2->setCarga(60);
+                $c2->setTampada(true);
                 $c2->tampar();
                 $c2->rabiscar();
                 $c2->carga();
@@ -112,7 +109,7 @@
                 $c3->setCor("preta");
                 $c3->setPonta(1.0);
                 $c3->setModelo("ZIG");
-                $c3->carga = 10;
+                $c3->setCarga(10);
                 $c3->destampar();
                 $c3->rabiscar();
                 $c3->carga();
