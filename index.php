@@ -48,6 +48,24 @@
         <section id="main"><!--conteudo principal-->
             <pre>
             <?php
+
+            require_once 'banco.php';
+            echo "</br>";
+                $p1 = new Banco();
+                $p2 = new Banco();
+            
+                $p1->setDono("jaguara");
+                $p1->abrirConta("CC");
+                $p1->setNumConta(1111);
+
+            echo "</br>";
+                $p2->setDono("tranquera");
+                $p2->abrirConta("CP");
+                $p2->setNumConta(2222);
+
+            print_r($p1);
+            print_r($p2);
+/*
             require_once 'poo.php';
         echo "</br>";
             $ca = new Carro();
@@ -72,15 +90,17 @@
             $ca->chekup();
             $ca->estadoCarro();
          var_dump($ca);
+           */
+
             ?>
             </pre>
         </section>
         <section id="destaques"><!--conteudo em destaque-->
             <pre>
             <?php
+            /*
                 require_once 'poo.php';
 
-            echo "</br>";
             // $c1 = new Caneta("BIC", "Azul", "0.5");     metodo construtor
             // $c2 = new Caneta("ZIG", "preta", "1.0");     metodo construtor
                 $c1 = new Caneta();
@@ -116,10 +136,9 @@
             var_dump($c3);
 
             echo "</br>";
-
             print "Eu tenho uma caneta {$c1->getModelo()} de ponta {$c1->getPonta()}";
-
             echo "</br>";
+            */
 
             ?>
             </pre>
