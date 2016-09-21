@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
 </head>
 <body>
-<?php
 
-require_once 'exercicios.php';
-
-
-
-
-
-?>
-
+<form method="get" action="exercicios.php">
+ANO DE NASCIMENTO
+<input type="number" placeholder="4 digitos" name="ano">
+<input type="button" value="verificar">
+</form>
 
 </body>
 </html>
