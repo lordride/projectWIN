@@ -6,6 +6,9 @@
 <body>
 <?php
 
+require_once 'exercicios.php';
+
+
 
 
 
