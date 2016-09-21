@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<form method="get" action="exercicios.php">
+<form method="get" action="condicionaisAninhadas.php">
 ANO DE NASCIMENTO
 <input type="number" placeholder="4 digitos" name="ano">
 <input type="button" value="verificar">

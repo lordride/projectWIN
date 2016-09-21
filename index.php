@@ -49,7 +49,7 @@
             <pre>
             <?php
 
-            require_once 'banco.php';
+            require_once 'bancoPOO.php';
             echo "</br>";
                 $p1 = new Banco();
                 $p2 = new Banco();

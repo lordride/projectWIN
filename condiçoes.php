@@ -1,4 +1,5 @@
 <?php
+//              CODIÇOES
 
 $numero = isset($_GET["numero"])?$_GET["numero"]:0;
 $oper = isset($_GET["oper"])?$_GET["oper"]:1;
@@ -21,7 +22,6 @@ $oper = isset($_GET["oper"])?$_GET["oper"]:1;
 $dia = isset($_GET["dia"])?$_GET["dia"]:0;
 
     switch ($dia){
-        case 1:
         case 2:
         case 3:
         case 4:
@@ -36,4 +36,5 @@ $dia = isset($_GET["dia"])?$_GET["dia"]:0;
         default:
             echo "<p>Dia da semana invalido</p>";
     }
+
 //---------------------------------------------------------------------------

@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<form method="get" action="EXER.php">
+<form method="get" action="condiçoes.php">
     
   <!-- Numero: <input type="number" placeholder="number" name="numero">
     <fieldset><legend>Operacao</legend>
@@ -22,7 +22,7 @@
 
     <input type="submit" value="avaliar">
 
-
+   <!-- <br><a href="javascript:history.go(-1)" class="botao">voltar</a>  -->
 </form>
 
 </body>
