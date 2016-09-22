@@ -1,5 +1,6 @@
 <?php
-
+// INDEX
+//-------------------------------------------------------
 class Banco{
 // ATRIBUTOS
     public $numConta;
