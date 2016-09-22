@@ -46,6 +46,12 @@
     </fieldset>
 </form>
 
+<form method="get" action="fatorial.php">
+    <fieldset><legend>Calculador do Fatorial</legend>
+        <input type="number" name="fatorial">
+        <input type="submit" value="calcular" name="botaoF">
+    </fieldset>
+</form>
 
 </body>
 </html>
