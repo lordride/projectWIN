@@ -38,5 +38,14 @@
     </fieldset>
 </form>
 
+<form method="get" action="FOR.php">
+    <fieldset><legend>Tabuada</legend>
+        <h4><p>Digite o numero da tabuada que voce quer</p></h4>
+        <input type="number" name="numero">
+        <input type="submit" name="botaoT" value="mostrar">
+    </fieldset>
+</form>
+
+
 </body>
 </html>
