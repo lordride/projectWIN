@@ -1,11 +1,18 @@
 <?php
-
-$numero = $_GET["fatorial"];
-
-$contador = $numero;
-
-for ($contador = $numero; $contador <= 1; $contador--){
-    echo "$contador<br>";
-  //  $result = $contador - 1;
+//              INDEX 3
+//  CALCULO DE UM NUMERO FATORIAL
+//--------------------------------------------------------------------
+if (isset ($_GET["botaoF"])){
+    $numero = $_GET["fatorial"];
 }
-echo "<a href='index3.php' class='botao'>voltar</a>";
+$cont = $numero;
+$fatorial = 1;
+
+    do{
+        $fatorial = $fatorial * $cont;
+        $cont--;
+    }while($cont >= 1);
+    echo "fatorial de  $numero != $fatorial";
+
+echo "<br><a href='index3.php'>voltar</a>";
+

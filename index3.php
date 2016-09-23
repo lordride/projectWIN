@@ -21,7 +21,7 @@
 </form>
 
 <form method="get" action="dirigir.php">
-    <fieldset><legend>Calcula a idade e diz se voce esta apto a tirar a carteira de motorista</legend>
+    <fieldset><legend>Calcula a idade e diz se você esta apto a tirar a carteira de motorista</legend>
         Ano atual:<?php $date = date("Y"); echo "$date<br>";?>
         Ano de nascimento:<input type="date" name="anoNasc"><br>
                             <input type="submit" value="verificar">
@@ -29,7 +29,7 @@
 </form>
 
 <form method="get" action="media.php">
-    <fieldset><legend>Calculador de media</legend>
+    <fieldset><legend>Calculador de média</legend>
         Nota 1:<input type="text" placeholder="0.00" name="n1"><br>
         Nota 2:<input type="text" placeholder="0.00" name="n2"><br>
         Nota 3:<input type="text" placeholder="0.00" name="n3"><br>
@@ -40,7 +40,7 @@
 
 <form method="get" action="FOR.php">
     <fieldset><legend>Tabuada</legend>
-        <h4><p>Digite o numero da tabuada que voce quer</p></h4>
+        Digite o número da tabuada que você deseja visualizar:<br>
         <input type="number" name="numero">
         <input type="submit" name="botaoT" value="mostrar">
     </fieldset>
@@ -52,6 +52,22 @@
         <input type="submit" value="calcular" name="botaoF">
     </fieldset>
 </form>
+
+<form method="get" action="Nprimo.php">
+    <fieldset><legend>Verificador de numero primo</legend>
+        <input type="number" name="numeroP">
+        <input type="submit" name="botaoP" value="verificar">
+    </fieldset>
+</form>
+
+<form>
+    <fieldset><legend></legend>
+        <input type="number" name="">
+        <input type="submit" name="" value="">
+    </fieldset>
+</form>
+
+
 
 </body>
 </html>
