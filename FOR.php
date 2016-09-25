@@ -9,3 +9,5 @@ for ($contador = 0; $contador <= 10; $contador++){
     echo "$n x $contador = $resp<br>";
 
 }
+echo "<br><a href='index3.php'>voltar</a>";
+
