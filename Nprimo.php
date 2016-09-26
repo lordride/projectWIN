@@ -7,20 +7,20 @@ if (isset($_GET["botaoP"])){
     $numero = $_GET["numeroP"];
 }
 
-$contador = 1;
-$contDiv = 0;
+$contador = 2;
+$numeroPrimo = 1;
 
 do{
-    if (($numero % $contador) == 0){
-        $contDiv = $contDiv + 1;
+    if ($numero % $contador == 0){
+        $numeroPrimo = 0;
     }
     $contador++;
-}while ($contador > $numero);
+}while($contador > $numero);
 
-if ($contDiv > 2){
-    echo "O valor $numero não é primo!<br>";
-}else{
+if ($numeroPrimo == 1){
     echo "O valor $numero é primo!<br>";
+}else{
+    echo "O valor $numero não é primo!<br>";
 }
 echo "<a href='index3.php'>voltar</a>";
 
