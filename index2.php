@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<form method="get" action="condicoes.php">
+<form method="get" action="condicoes.php" enctype="multipart/form-data">
 
       Numero: <input type="number" placeholder="num" name="numero">
        <fieldset><legend>Operacao</legend>
@@ -19,6 +19,7 @@
 
        <input type="submit" value="calcular"><br>
 </form>
+
 <form method="get" action="condicoes2.php">
 
            <br>DIA DA SEMANA: <input type="number" name="dia" min="2" max="8" >

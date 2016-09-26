@@ -2,7 +2,6 @@
 //              INDEX 3
 // CONDICIONAL 
 //-----------------------------------------------------------
-
 if (isset($_GET["botaoMedia"])){
     $nota1 = (real) $_GET["n1"];
     $nota2 = (real) $_GET["n2"];

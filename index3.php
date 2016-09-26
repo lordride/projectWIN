@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="UTF-8">
+
 </head>
 <body>
 
@@ -22,7 +24,7 @@
 
 <form method="get" action="dirigir.php">
     <fieldset><legend>Calcula a idade e diz se você esta apto a tirar a carteira de motorista</legend>
-        Ano atual:<?php $date = date("Y"); echo "$date<br>";?>
+        Ano atual:<?php $date = date("Y"); echo $date."<br>"; ?>
         Ano de nascimento:<input type="date" name="anoNasc"><br>
                             <input type="submit" value="verificar">
     </fieldset>
