@@ -179,9 +179,29 @@ function media($n1=0,$n2=0,$n3=0,$n4=0)
 //              INDEX 3 MEDIA UNIASSELVI
 //------------------------------------------------------------------------
 
-function mediaUniasselvi($primeiroBimestre=0, $segundoBimestre=0, $exame){
-    
+function mediaUniasselvi($primeiroBimestre=0, $segundoBimestre=0, $exame=0){
+
+    $primeiroB = (float)$primeiroBimestre;
+    $segundoB = (float)$segundoBimestre;
+    $ex = (float)$exame;
+
+    $mediaF = ($primeiroB + $segundoB) / 2;
+        $mediaEx = ($mediaF + $ex) / 2;
+
+    if ($mediaF >= 7){
+        echo "Sua média é $mediaF, você está aprovado!";
+    }elseif($mediaEx >= 6){
+        echo "Sua média é $mediaF, você está aprovado!";
+    }elseif($mediaF < 7){
+        echo "Sua média é $mediaF, você está em exame!";
+    }elseif ($mediaEx < 6){
+        echo "Sua média é $mediaEx, você está reprovado!";
+    }elseif ($mediaF < 2){
+        echo "Sua média é $mediaF, você está reprovado!";
+    }
+    echo "<br/><a href='index3.php'>voltar</a>";
 }
+
 
 
 

@@ -104,10 +104,10 @@ if (isset($_GET['primeiroBimestre']) && isset($_GET['segundoBimestre']) && isset
 
 <form method="get" action="index3.php">
     <fieldset><legend>Calculo média Uniasselvi</legend>
-        1ºB:<input type="number" name="primeiroBimestre"/>
-        2ºB:<input type="number" name="segundoBimestre"/>
-        Exame:<input type="number" name="exame"/>
-        <input type="submit" value="calcular"/>
+        1ºB:<input type="text" name="primeiroBimestre">
+        2ºB:<input type="text" name="segundoBimestre">
+        Exame:<input type="text" name="exame">
+        <input type="submit" value="calcular">
     </fieldset>
 </form>
 
