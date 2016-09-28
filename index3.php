@@ -34,6 +34,9 @@ if (isset($_GET['numeroP'])){
     numeroPrimo($_GET['numeroP']);
 }
 
+if (isset($_GET['primeiroBimestre']) && isset($_GET['segundoBimestre']) && isset($_GET['exame'])){
+    mediaUniasselvi($_GET['primeiroBimestre'],$_GET['segundoBimestre'],$_GET['exame']);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -99,14 +102,14 @@ if (isset($_GET['numeroP'])){
     </fieldset>
 </form>
 
-<form>
-    <fieldset><legend></legend>
-        <input type="number" name="">
-        <input type="submit" value="">
+<form method="get" action="index3.php">
+    <fieldset><legend>Calculo média Uniasselvi</legend>
+        1ºB:<input type="number" name="primeiroBimestre"/>
+        2ºB:<input type="number" name="segundoBimestre"/>
+        Exame:<input type="number" name="exame"/>
+        <input type="submit" value="calcular"/>
     </fieldset>
 </form>
-
-
 
 </body>
 </html>

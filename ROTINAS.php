@@ -34,7 +34,6 @@ function soma(){
 $r = soma(5,8,9,6);
 
 echo "$r";
-<<<<<<< Updated upstream
 */
 
 /*
@@ -76,4 +75,21 @@ $y = 6;
 soma($x,$y);
 echo "$y $x";
 */
+/*
+function fibonacci(& $a, & $b){
+    $c = $a + $b;
+    echo "$c ";
+    $a = $b;
+    $b = $c;
+}
+$t1 = 0;
+echo "$t1 ";
+$t2 = 1;
+echo "$t2 ";
+for ($i = 3; $i <= 15; $i++){
+    fibonacci($t1, $t2);
+}
+*/
+
+
 
