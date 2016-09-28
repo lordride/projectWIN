@@ -2,18 +2,25 @@
 //----------------------------------------------------------------------
 //PROPORÇÃO AUREA algoritmo "Fibonacci"
 
+
+function fibonacci(&$t1, &$t2)
+{
+    $t3 = $t1 + $t2;
+    $t1 = $t2;
+    $t2 = $t3;
+
+    return $t3;
+}
+echo "PROPORÇÃO AUREA serie de Fibonacci" . "<br>";
+
 $t1 = 0;
 $t2 = 1;
 
-echo "PROPORÇÃO AUREA serie de Fibonacci"."<br>";
-echo "$t1 $t2 ";
-
 for ($i = 3; $i <= 15; $i++) {
-    $t3 = $t1 + $t2;
-    echo "$t3 ";
-    $t1 = $t2;
-    $t2 = $t3;
+    $t3 = fibonacci($t1,$t2);
+    echo "$t3 "."<br/>";
 }
+
 
 /*
 // =============================================================
