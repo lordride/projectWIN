@@ -34,6 +34,7 @@ function soma(){
 $r = soma(5,8,9,6);
 
 echo "$r";
+<<<<<<< Updated upstream
 */
 
 /*
@@ -63,6 +64,7 @@ $b = 8;
 triplica(4,8);
 */
 
+/*
 function soma($a, $b){
     $a = +2;
     $b = +4;
@@ -73,5 +75,5 @@ $y = 6;
 
 soma($x,$y);
 echo "$y $x";
-
+*/
 
