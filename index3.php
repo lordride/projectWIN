@@ -3,40 +3,56 @@
 include('functions.inc.php');
 
 if (isset($_GET['fatorial'])){
-    fatorial($_GET['fatorial']);
+   $result = fatorial($_GET['fatorial']);
+    echo "fatorial do número é = $result";
+    echo "<br><a href='index3.php'>voltar</a>";
 }
 
 if (isset($_GET['peso']) && isset($_GET['metros']) ){
-    calculoIMC($_GET['peso'], $_GET['metros']);
+   $result = calculoIMC($_GET['peso'], $_GET['metros']);
+    echo "seu IMC é: $result ";
+    echo "<br><a href='index3.php' class='botao'>voltar</a>";
 }
 
 if (isset($_GET['ano'])){
-    votacao($_GET['ano']);
+   $result = votacao($_GET['ano']);
+    echo "<p>Voce tem: $result</p>";
+    echo "<br><a href='index3.php' class='botao'>voltar</a>";
 }
 
 if (isset($_GET['anoNasc'])){
-    dirigir($_GET['anoNasc']);
+   $result = dirigir($_GET['anoNasc']);
+    echo "<p>sua idade e: $result</p>";
+    echo "<br><a href='index3.php' class='botao'>voltar</a>";
 }
 
 if (isset($_GET['n1']) && isset($_GET['n2']) && isset($_GET['n3']) && isset($_GET['n4'])){
-    media($_GET['n1'],$_GET['n2'],$_GET['n3'],$_GET['n4']);
+   $result = media($_GET['n1'],$_GET['n2'],$_GET['n3'],$_GET['n4']);
+    echo "<p>sua media é: $result</p>";
+    echo "<br><a href='index3.php' class='botao'>voltar</a>";
 }
 
 if (isset($_GET['numero'])){
-    tabuada($_GET['numero']);
-}
-
-if (isset($_GET['fatorial'])){
-    fatorial($_GET['fatorial']);
+   $result = tabuada($_GET['numero']);
+    echo "<a href='index3.php'>voltar</a>";
 }
 
 if (isset($_GET['numeroP'])){
-    numeroPrimo($_GET['numeroP']);
+   $result = numeroPrimo($_GET['numeroP']);
+    echo "<a href='index3.php'>voltar</a>";
+
 }
 
 if (isset($_GET['primeiroBimestre']) && isset($_GET['segundoBimestre']) && isset($_GET['exame'])){
-    mediaUniasselvi($_GET['primeiroBimestre'],$_GET['segundoBimestre'],$_GET['exame']);
+   $result = mediaUniasselvi($_GET['primeiroBimestre'],$_GET['segundoBimestre'],$_GET['exame']);
+    echo "<br/><a href='index3.php'>voltar</a>";
 }
+
+if (isset($_GET['inicio']) && isset($_GET['fim']) && isset($_GET['incremento'])){
+    $result = contadorInteligente($_GET['inicio'],$_GET['fim'],$_GET['incremento']);
+    echo "<a href='index3.php'>voltar</a>";
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -108,6 +124,18 @@ if (isset($_GET['primeiroBimestre']) && isset($_GET['segundoBimestre']) && isset
         2ºB:<input type="text" name="segundoBimestre">
         Exame:<input type="text" name="exame">
         <input type="submit" value="calcular">
+    </fieldset>
+</form>
+
+<form method="get" action="index4.php">
+    <fieldset><legend>Contador Inteligente</legend>
+    Inicio:<br><input type="number" name="inicio" value="inicio" min="0" required>
+    <br/>
+    Final:<br><input type="number" name="fim" value="fim" min="0" required>
+    <br/>
+    Incremento:<br><input type="number" name="incremento" value="incremento" min="1" required>
+    <br/>
+    <input type="submit" value="enviar">
     </fieldset>
 </form>
 
