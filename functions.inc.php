@@ -169,7 +169,7 @@ function media($n1=0,$n2=0,$n3=0,$n4=0)
 //              INDEX 3 MEDIA UNIASSELVI
 //------------------------------------------------------------------------
 
-
+/*
 function mediaUniasselvi($primeiroBimestre=0, $segundoBimestre=0, $exame=0){
 
     $primeiroB = (float)$primeiroBimestre;
@@ -196,7 +196,7 @@ function mediaUniasselvi($primeiroBimestre=0, $segundoBimestre=0, $exame=0){
     return $mediaF;
 }
 
-
+*/
 
 
 

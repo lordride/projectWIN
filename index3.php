@@ -127,7 +127,7 @@ if (isset($_GET['inicio']) && isset($_GET['fim']) && isset($_GET['incremento']))
     </fieldset>
 </form>
 
-<form method="get" action="index4.php">
+<form method="get" action="index3.php">
     <fieldset><legend>Contador Inteligente</legend>
     Inicio:<br><input type="number" name="inicio" value="inicio" min="0" required>
     <br/>
