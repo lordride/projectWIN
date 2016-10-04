@@ -82,7 +82,6 @@ function numeroPrimo($numeroPrimo=0)
 {
     $numeroP = (int)$numeroPrimo;
 
-
     $contador = 2;
     $numeroPrimo = 1;
 
