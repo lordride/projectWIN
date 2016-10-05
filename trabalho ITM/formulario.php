@@ -23,7 +23,7 @@ if(count($_POST)){
 <body>
 
 
-<form method="post" action="funcoesFORMULARIO.php">
+<form method="post" action="">
     <fieldset><legend>Cadastro Cliente</legend>
         Nome:<br/><input type="text" name="nome" id="nomeCliente" placeholder="Nome"><br/><br/>
         CPF:<br/><input type="text" name="cpf" id="numCpf" placeholder="000.000.000-00" style="float: left">
