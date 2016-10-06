@@ -2,9 +2,7 @@
 
 include('cidades.php');
 
-require_once ("PESSOAS.php");
-
-
+include ("PESSOAS.php");
 
 
 ?>
@@ -21,12 +19,12 @@ require_once ("PESSOAS.php");
 </head>
 
 <body>
-<form action="PESSOAS.php" method="post">
+<form action="cidadesESTADOS.php" method="GET" id="form" name="form">
     <fieldset>
         <br/>
         <label for="nome">Nome:</label>
 
-        <input type="text" id="nome" placeholder="nome"><br/><br/>
+        <input type="text" id="nome" name="nome" placeholder="nome"><br/><br/>
 
         <label for="MASC">Sexo:</label>
 
@@ -40,30 +38,30 @@ require_once ("PESSOAS.php");
 
         <label for="PF">Pessoa Fisica</label>
 
-        <input type="radio" name="tipo" id="PF" value="pf">
+        <input type="radio" name="tipo" id="PF" value="pf" checked="true">
 
         <label for="PJ">Pessoa Juridica</label>
 
         <input type="radio" name="tipo" id="PJ" value="pj"><br/><br/>
 
 
-        <label for="DOC">CPF / CNPJ</label>
+        <label class="nomeDocumento"> CPF</label>
 
-        <input type="text" id="DOC">
+        <input type="text" id="DOC" name="documento" style="background-color: greenyellow">
         <br/><br/>
 
         <label for="estados">Estados:</label>
-            <select id="estados">
+            <select id="estados" name="estado">
             <?php foreach($arrCidades as $sigla => $arrayCidades){ ?>
                 <option value="<?= $sigla; ?>">  <?= $sigla; ?> </option>
             <?php } ?>
             </select>
 
         <label for="cidades">Cidades:</label>
-        <select id="cidades"> </select><br/><br/>
+        <select id="cidades" name="cidade"> </select><br/><br/>
 
 
-        Endereço:<input type="text" id="endereco">
+        Endereço:<input type="text" id="endereco" name="endereco">
         <label for="endereco"></label><br/><br/>
 
         <input type="submit" id="cadastrar" value="Cadastrar">
@@ -89,9 +87,21 @@ require_once ("PESSOAS.php");
             });                       
         });
 
+        $("input[name='tipo']").change(function () {
+            var tipo = $(this).val();
+            if(tipo === "pf"){
+                $(".nomeDocumento").html("CPF");
+                $("#DOC").css("background-color","greenyellow");
+            }else{
+                $(".nomeDocumento").html("CNPJ");
+                $("#DOC").css("background-color","deepskyblue");
+            }
+        });
+
 
 
     })
+
 
 
 </script>
