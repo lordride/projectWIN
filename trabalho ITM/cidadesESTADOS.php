@@ -89,7 +89,7 @@ require_once ("PESSOAS.php");
             });                       
         });
 
-        
+
 
     })
 
@@ -102,6 +102,8 @@ require_once ("PESSOAS.php");
 
 
 <!--
+
+asdsa
 
 var var_name = $("input[name='radio_name']:checked").val();
 
