@@ -13,7 +13,7 @@ class Pessoa
 //----------------GET / SET--------------------
     public function getNome(){
         return $this->nome;
-    } 
+    }
     public function getTipo()
     {
         return $this->tipo;
@@ -69,10 +69,11 @@ class Pessoa
 
 //---------------------objetos------------------
 
-    public function Pessoa($nome,$tipo,$estado,$cidade,$endereco,$documento){
+    public function Pessoa($nome,$tipo, $sexo,$estado,$cidade,$endereco,$documento){
         
         $this->nome = $nome;
         $this->tipo = $tipo;
+        $this->sexo = $sexo;
         $this->estado = $estado;
         $this->cidade = $cidade;
         $this->endereco = $endereco;
@@ -82,7 +83,3 @@ class Pessoa
 
 
 }
-
-
-
-    
