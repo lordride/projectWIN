@@ -69,7 +69,7 @@ if(count($_POST)){
                type:"GET",
                url:"indexEX1.php",
                data:"total1="+tot1+"&total2="+tot2,
-                success: function (data) {              // NUNCA ESQUECER DE COLOCAR COLOCAR DE ONDE VEM A RESPOSTA NO FUNCTION
+                success: function (data) {              // NUNCA ESQUECER DE COLOCAR DE ONDE VEM A RESPOSTA NO FUNCTION
                     $("#resultadoFinal").val(data);
                 }
             });

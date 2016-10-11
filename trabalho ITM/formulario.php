@@ -41,19 +41,13 @@ if(count($_POST)){
     function escrever(valor) {
         $(".info").html(valor);
     }
-
   $(function(){
-
-
       $("#botaoValidar").click(function(){
-
           var doc = $("#numCpf").val();
-
           $.ajax({
                     type: 'GET',
                     url: 'ajax/index.php',
                     data: 'doc='+doc,
-
                 success: function (result) {
                     if (result === 'error'){
                         alert('Ops! Caralho este cpf ja existente porra!!!');
@@ -63,33 +57,23 @@ if(count($_POST)){
       });
 
       $("#validaNome").click(function () {
-          
+
           var nom = $("#nomeCliente").val();
-
-
           $.ajax({
                     type: 'GET',
                     url: 'ajax/index.php',
                     data: 'nom='+nom,
-
               beforeSend: function () {
                    escrever('hakunamatata');
               },
-
               success: function (retorno) {
                   if (retorno === 'error'){
                       alert('Porra tu ja esta cadastrado caralho??');
                   }
               }
-
           });
       });
-
   })
-
-
-
-
 </script>
 
 
