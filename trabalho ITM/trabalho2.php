@@ -41,25 +41,21 @@
         //$("#world").addClass('skol');
         //$("#world").removeClass('heineken');
 
-        //$("#world").keydown(function () {
+        $("#world").keydown(function () {
 
-        //    alert("soltou a tecla");
-        //});
+            alert("soltou a tecla");
+        });
 
 
-        //$("#form").find("label").css("color", "red");
+        $("#form").find("label").css("color", "red");
 
 
         $( "li" ).each(function( index ) {
 
             if(index === 1){
-               // $(this).html("FELIZ");
+                $(this).html("FELIZ");
             }
-
-            console.log(  $( this ).html() );
         });
-
-
     })
 
 

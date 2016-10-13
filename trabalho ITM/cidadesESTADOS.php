@@ -105,9 +105,7 @@ include ("PESSOAS.php");
         });
 */
         $("#estados").change(function () {
-
             var sigla = $("#estados").val();
-
             $.post("ajax/getCidade.php",{estadoR: sigla}, function (data) {     //POST sempre precisa passar os parametros
                 $("#cidades").html(data);
             })
@@ -115,7 +113,7 @@ include ("PESSOAS.php");
                 alert("selecione uma cidade");
             })
         });
-
+        
         $("input[name='tipo']").change(function () {
             var tipo = $(this).val();
             if(tipo === "pf"){

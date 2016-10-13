@@ -36,6 +36,4 @@ if (isset($_FILES['foto'])){
 
     // tudo ok, faz upload
 
-
-
 }
