@@ -53,13 +53,10 @@ $arrCores["blue"] = "azul";
             var i ;
 
             $("#div").html('');
-
-
             for (i = 1; i <= numCamp; i++){
                 $("#div").append('Nome:<input type="text" id="campo-'+i+'" class="campo" name="nome['+i+']"><br/><br/>');
             }
             $("#tituloCampo").show();
-
             $("#div").append('<input type="submit" value="Enviar">');
         });
 

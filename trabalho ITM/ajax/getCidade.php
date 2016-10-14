@@ -7,13 +7,19 @@ include('../cidades.php');
 
 $sigla = $_POST['estadoR'];
 
-$return = "";
+$return = array("cidades", "mensagem");
 
 if( !in_array($sigla, $arrCidades)   ){
+
+    $str = "";
+
     foreach($arrCidades[$sigla] as $key => $nomeCidade){
-        $return .= "<option value='{$nomeCidade}'> {$nomeCidade} </option>";
-    }    
+        $str .= "<option value='{$nomeCidade}'> {$nomeCidade} </option>";
+    }
+
+    $return['cidades'] = $str;
 }else{
-    $return = '<option value=""> Cidades não encontradas!</option>';
+    $return['cidades'] = '<option value=""> Cidades não encontradas!</option>';
 }
-echo $return;
+
+echo json_encode($return);

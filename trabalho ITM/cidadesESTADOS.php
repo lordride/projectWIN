@@ -107,10 +107,10 @@ include ("PESSOAS.php");
         $("#estados").change(function () {
             var sigla = $("#estados").val();
             $.post("ajax/getCidade.php",{estadoR: sigla}, function (data) {     //POST sempre precisa passar os parametros
-                $("#cidades").html(data);
-            })
-                .done(function () {
-                alert("selecione uma cidade");
+                $("#cidades").html(data.cidades);
+            },"json")
+                .fail(function () {
+                    alert("Ops... error...")
             })
         });
         

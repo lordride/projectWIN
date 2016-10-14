@@ -4,7 +4,6 @@ include "clientes/objeto_trabalho3PP.php";
 
 $arrAnimal = array("cat"=>"gato","dog"=>"cachorro");
 
-
 ?>
 
 <!DOCTYPE>
@@ -61,6 +60,7 @@ $arrAnimal = array("cat"=>"gato","dog"=>"cachorro");
 
 <script type="text/javascript">
 
+
     $(function () {
 
         $("#select").change(function () {
@@ -83,7 +83,7 @@ $arrAnimal = array("cat"=>"gato","dog"=>"cachorro");
 
         $("#form").submit(function(event) {
             event.preventDefault();
-            var data = $('form').serialize();
+            var data = $(this).serialize();
             $.get("trabalho3ppp.php?"+data, function (result) {
                 $("#div").html(result);
             });
@@ -96,10 +96,20 @@ $arrAnimal = array("cat"=>"gato","dog"=>"cachorro");
            if($("#salario").val()!= ''){
                $("#div").html("Seu custo para a empresa é de: "+ resultado);
            }
+            // validação de nome completo
+                var nome = $("#nome").val().split(" " ,3);
+                if (nome.length < 2){
+                    alert("Nome comepleto obrigatório.");
+                }
         });
 
+        $("#dataN").keyup(function () {
+            var data = $(this).val();
 
-
+            $.get("ajax/calculo_data_ajax.php",{dataNasc: data}, function (resposta) {
+                $("#div").html(resposta);
+            });
+        });
 
     })
 

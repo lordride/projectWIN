@@ -1,5 +1,12 @@
-
-
+<?php
+/* 
+    slideup
+    
+    slidedown
+    
+    toggle 
+*/
+?>
 
 <!DOCTYPE>
 <html>
@@ -13,9 +20,21 @@
 <body>
 
 
-<script src="js/jquery.mask.js" type="text/javascript"></script>
+
+
+
+<script src="../js/jquery.mask.js" type="text/javascript"></script>
 <script type="text/javascript">
+
+
 
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
