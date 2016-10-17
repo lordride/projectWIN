@@ -5,20 +5,14 @@ include('cidades.php');
 include ("PESSOAS.php");
 
     $nome = isset($_POST['nome']) ? $_POST['nome']:'';
-
     $tipo = isset($_POST['tipo']) ? $_POST['tipo']:'';
-
     $sexo = isset($_POST['sexo']) ? $_POST['sexo']:'';
-
     $cidade = isset($_POST['cidade']) ? $_POST['cidade']:'';
-
     $estado = isset($_POST['estado']) ? $_POST['estado']:'';
-
     $endereco = isset($_POST['endereco']) ? $_POST['endereco']:'';
-
     $documento = isset($_POST['documento']) ? $_POST['documento']:'';
 
-    $obj = new Pessoa($nome,$tipo,$sexo,$cidade,$estado,$endereco,$documento);
+        $obj = new Pessoa($nome,$tipo,$sexo,$cidade,$estado,$endereco,$documento);
 
     echo "<pre>";
     print_r($obj);
@@ -110,8 +104,8 @@ include ("PESSOAS.php");
                 $("#cidades").html(data.cidades);
             },"json")
                 .fail(function () {
-                    alert("Ops... error...")
-            })
+                    alert("Ops... error...");
+            });
         });
         
         $("input[name='tipo']").change(function () {
