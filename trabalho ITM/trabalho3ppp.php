@@ -10,6 +10,7 @@ $sexo = isset($_GET['sexo']) ? $_GET['sexo']:'';
 $tipoPessoa = isset($_GET['tipo']) ? $_GET['tipo']:'';
 $salario = isset($_GET['salario']) ? $_GET['salario']:'';
 
+
 $obj = new Cadastro($nome,$animal,$documento,$dataNasc,$sexo,$tipoPessoa,$salario);
 echo "Nome: ".$nome."<br/>";
 echo "Sexo: ".$sexo."<br/>";

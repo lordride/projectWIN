@@ -1,7 +1,6 @@
 <?php
 
 ?>
-
 <!DOCTYPE>
 <html>
 <head>
@@ -14,7 +13,7 @@
 
 
 
-
+<a href="index.php"><input type="button" class="voltar" value="voltar"></a>
 
 <script src="../js/jquery.mask.js" type="text/javascript"></script>
 <script type="text/javascript">
