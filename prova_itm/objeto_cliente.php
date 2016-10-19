@@ -9,10 +9,9 @@ class Cliente{
     private $senha;
 
 //      const
-    private static $TIPOS = [1=>"Master",2=>"Normal"];
+    private static $TIPOS = [1=>"Master",2=>"Cliente"];
 
-    //get
-    
+    //get    
     public function getSenha(){
         return $this->senha;
     }
@@ -20,7 +19,7 @@ class Cliente{
         return $this->nome;
     }
     public function getTipo(){
-        return self::$TIPOS[$this->tipo];
+        return $this->tipo;
     }
     public function getDocumento(){
         return $this->documento;
@@ -37,8 +36,10 @@ class Cliente{
     }
     public function setTipo($tipo){
         if (!in_array($tipo, self::$TIPOS)){
+
             throw new Exception ("Este tipo de cliente não existe.");
         }
+
         $this->tipo = array_search($tipo, self::$TIPOS);
     }
     public function setDocumento($documento){
@@ -51,21 +52,40 @@ class Cliente{
     //construct
     public function Cliente($nome,$tipo,$documento,$senha){
         $this->nome = $nome;
-        $this->tipo = $tipo;
+        $this->setTipo($tipo);
         $this->documento = $documento;
         $this->senha = $senha;
     }
 
+    public function save($conexaoDB){
+
+        try {
+            $query = "INSERT INTO CLIENTE(NOME,TIPO_CLIENTE,DOCUMENTO,SENHA) VALUES ('{$this->getNome()}','{$this->getTipo()}','{$this->getDocumento()}','{$this->getSenha()}')";
+
+            print_r($query);
+            return mysqli_query($conexaoDB, $query);
+        }catch (Exception $e){
+            print_r($e);
+        }
+
+
+    }
+
 }
+
 
 //      CONTATO
 class Contato{
-
+    
+    private $contatoId;
     private $clienteId;
     private $tipoContato;
     
 
 //get
+    public function getContatoId(){
+        return $this->contatoId;
+    }
     public function getTipoContato(){
         return $this->tipoContato;
     }
@@ -74,6 +94,9 @@ class Contato{
     }
 
 //set
+    public function setContatoId($contatoId){
+        $this->contatoId = $contatoId;
+    }
     public function setClienteId($clienteId){
         $this->clienteId = $clienteId;
     }
@@ -84,6 +107,15 @@ class Contato{
     //construct
     public function Contato($tipoContato){
         $this->tipoContato = $tipoContato;
+    }
+
+    public function save($conexaoDB){
+
+            $query = "INSERT INTO CONTATO(TIPO_CLIENTE) VALUES ('{$this->getNome()}','{$this->getTipo()}','{$this->getDocumento()}','{$this->getSenha()}')";
+
+            print_r($query);
+            return mysqli_query($conexaoDB, $query);
+
     }
 }
 
