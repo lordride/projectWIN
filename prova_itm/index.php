@@ -1,6 +1,9 @@
 <?php
 include "conexao_db.php";
 
+session_start();
+
+
 
 ?>
 <!DOCTYPE>
@@ -29,6 +32,7 @@ include "conexao_db.php";
 </head>
 <body class="container">
 
+
 <header style="text-align: center" id="cabecalho"><h1>Biblioteca Cuca Fresca</h1><br/><br/>
 
 </header>
@@ -36,7 +40,6 @@ include "conexao_db.php";
 
         <label for="cliente">Área do Cliente</label><br/>
         <a href="index_area_cliente.php"><input type="button" id="cliente" value="Entrar" class="botao btn btn-primary"></a><br/><br/>
-        <div id="login">
 
             <label for="cpfLogin">CPF:</label>
             <input type="text" id="cpfLogin" class="form-control"><br/>
@@ -63,6 +66,7 @@ include "conexao_db.php";
     $(function () {
         
         
+        
     })
     
 </script>
@@ -70,6 +74,7 @@ include "conexao_db.php";
 </html>
 
 <?php
-mysqli_close($link);
+
+
 
 ?>

@@ -15,6 +15,8 @@ print_r($_SESSION['pessoa']);
 
 $objetoSessao = unserialize($_SESSION['pessoa']);
 
+
+echo "<pre>";
 print_r(unserialize($_SESSION['pessoa']));
 
 

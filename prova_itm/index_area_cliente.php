@@ -1,4 +1,16 @@
 <?php
+include "conexao_db.php";
+
+session_start();
+
+if((!isset ($_SESSION['documento']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+    unset($_SESSION['documento']);
+    unset($_SESSION['senha']);
+    header('location:index.php');
+}else{
+    echo "hello";
+}
 
 
 ?>
@@ -15,6 +27,8 @@
     <script type="text/javascript" src="../js/jquery-3.1.0.js" ></script>
 </head>
 <body>
+
+
 
 <form>
 

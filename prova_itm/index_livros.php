@@ -1,6 +1,8 @@
 <?php
 include "objeto_livro.php";
 
+session_start();
+
 ?>
 <!DOCTYPE>
 <html>
@@ -37,7 +39,7 @@ include "objeto_livro.php";
             <input type="text" class="form-control" id="titulo" name="titulo"><br/><br/>
 
         <label for="numeroDaObra">Numero da obra:</label>
-            <input type="text" class="form-control" id="numeroDaObra" name="numerDaObra"><br/><br/>
+            <input type="text" class="form-control" id="numeroDaObra" name="numeroDaObra"><br/><br/>
 
         <label for="assunto">Assunto:</label><br/>
             <textarea id="assunto" rows="5" cols="40" maxlength="300" name="assunto"></textarea><br/><br/>
@@ -72,3 +74,4 @@ include "objeto_livro.php";
 </script>
 </body>
 </html>
+

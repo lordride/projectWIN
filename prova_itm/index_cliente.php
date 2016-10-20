@@ -52,7 +52,7 @@ include "objeto_cliente.php";
             <input type="radio" id="cliente" name="tipo" value="Cliente"><br/><br/>
 
         <label for="addFone">Telefone:</label>
-            <input type="submit" id="addFone" class="botao btn btn btn-info btn-xs" name="addFone" value="+"><br/>
+            <input type="submit" id="addFone" class="botao btn btn-info btn-xs" name="addFone" value="+"><br/>
         <div id="campoFone"></div><br/>
 
         <br/><label for="addEmail">Email:</label>

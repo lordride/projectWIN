@@ -2,19 +2,29 @@
 include "conexao_db.php";
 include "objeto_livro.php";
 
+
+//  AUTOR
 $autor = isset($_POST['autor'])? $_POST['autor']:'';
 
-$numeroObra = isset($_POST['numerDaObra'])? $_POST['numerDaObra']:'';
+$objAutor = new Autor($autor);
+
+if (!$objAutor->save($conexaoDB)){
+    echo "nao foi possivel salvar no banco";
+}
+
+
+
+//  LIVRO
+$numeroObra = isset($_POST['numeroDaObra'])? $_POST['numeroDaObra']:'';
 $titulo = isset($_POST['titulo'])? $_POST['titulo']:'';
 $assunto = isset($_POST['assunto'])? $_POST['assunto']:'';
 
-$obj = new Livro($numeroObra,$titulo,$assunto,$autor);
 
+$objLivro = new Livro($numeroObra,$titulo,$assunto);
 
-echo "<pre>";
-print_r($obj);
-
-
+if (!$objLivro->save($conexaoDB)){
+    echo "nao foi possivel salvar no banco";
+}
 
 
 

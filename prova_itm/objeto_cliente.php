@@ -10,8 +10,8 @@ class Cliente{
 
 //      const
     private static $TIPOS = [1=>"Master",2=>"Cliente"];
-
-    //get    
+    
+//      get    
     public function getSenha(){
         return $this->senha;
     }
@@ -58,33 +58,38 @@ class Cliente{
     }
 
     public function save($conexaoDB){
-
-        try {
+        
             $query = "INSERT INTO CLIENTE(NOME,TIPO_CLIENTE,DOCUMENTO,SENHA) VALUES ('{$this->getNome()}','{$this->getTipo()}','{$this->getDocumento()}','{$this->getSenha()}')";
-
-            print_r($query);
-            return mysqli_query($conexaoDB, $query);
-        }catch (Exception $e){
-            print_r($e);
+        
+        if (mysqli_query($conexaoDB, $query)){
+           $this->id = mysqli_insert_id($conexaoDB);
+            return true;
         }
 
-
+        return false;
     }
 
 }
 
-
 //      CONTATO
 class Contato{
     
-    private $contatoId;
+    private $id;
     private $clienteId;
     private $tipoContato;
+    private $descricao;
+    private $link;
     
 
 //get
-    public function getContatoId(){
-        return $this->contatoId;
+    public function getLink(){
+        return $this->link;
+    }
+    public function getDescricao(){
+        return $this->descricao;
+    }
+    public function getId(){
+        return $this->id;
     }
     public function getTipoContato(){
         return $this->tipoContato;
@@ -94,8 +99,14 @@ class Contato{
     }
 
 //set
-    public function setContatoId($contatoId){
-        $this->contatoId = $contatoId;
+    public function setLink($link){
+        $this->link = $link;
+    }
+    public function setDescricao($descricao){
+         $this->descricao = $descricao;
+    }
+    public function setId($id){
+        $this->id = $id;
     }
     public function setClienteId($clienteId){
         $this->clienteId = $clienteId;
@@ -105,17 +116,25 @@ class Contato{
     }
 
     //construct
-    public function Contato($tipoContato){
+    public function Contato($tipoContato,$descricao,$link = '',$clienteId){
+
         $this->tipoContato = $tipoContato;
+        $this->descricao = $descricao;
+        $this->link = $link;
+        $this->clienteId = $clienteId;
     }
 
     public function save($conexaoDB){
 
-            $query = "INSERT INTO CONTATO(TIPO_CLIENTE) VALUES ('{$this->getNome()}','{$this->getTipo()}','{$this->getDocumento()}','{$this->getSenha()}')";
+            $query = "INSERT INTO CONTATO(TIPO_CONTATO,DESCRICAO,LINK,CLIENTE_ID) VALUES ('{$this->getTipoContato()}','{$this->getDescricao()}','{$this->getLink()}','{$this->getClienteId()}')";
 
-            print_r($query);
-            return mysqli_query($conexaoDB, $query);
+        if (mysqli_query($conexaoDB, $query)){
+            $this->clienteId = mysqli_insert_id($conexaoDB);
+            return true;
+        }
+        return false;
 
     }
+
 }
 
