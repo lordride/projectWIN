@@ -10,6 +10,7 @@ session_start();
 
 $_SESSION['pessoa'] = serialize($obj);
 
+
 print_r($_SESSION['pessoa']);
 
 

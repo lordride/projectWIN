@@ -4,7 +4,6 @@ include "objeto_cliente.php";
 
 //  CLIENTES
 
-
     $nome = isset($_POST['nome'])? $_POST['nome']:'';
     $tipo = isset($_POST['tipo'])? $_POST['tipo']:'';
     $documento = isset($_POST['doc'])? $_POST['doc']:'';

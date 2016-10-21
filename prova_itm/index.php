@@ -1,8 +1,4 @@
 <?php
-include "conexao_db.php";
-
-session_start();
-
 
 
 ?>
@@ -32,19 +28,19 @@ session_start();
 </head>
 <body class="container">
 
-
 <header style="text-align: center" id="cabecalho"><h1>Biblioteca Cuca Fresca</h1><br/><br/>
 
 </header>
-    <form action="" method="post" id="formIndex" class="container">
-
+    <form method="post" id="formIndex" class="container">
+        <div id="login">            
         <label for="cliente">Área do Cliente</label><br/>
-        <a href="index_area_cliente.php"><input type="button" id="cliente" value="Entrar" class="botao btn btn-primary"></a><br/><br/>
+        <a href="index.php"><input type="submit" id="cliente" value="Entrar" class="botao btn btn-primary"></a><br/><br/>
 
             <label for="cpfLogin">CPF:</label>
             <input type="text" id="cpfLogin" class="form-control"><br/>
             <label for="senha">Senha:</label>
             <input type="text" id="senha" class="form-control"><br/><br/>
+            <div id="error"></div>
         </div>
 
         <label for="livro">Biblioteca</label><br/>
@@ -55,23 +51,35 @@ session_start();
 
 </form>
 
-<footer id="rodape">
-
-
-</footer>
-
 <script src="../js/jquery.mask.js" type="text/javascript"></script>
 <script type="text/javascript">
 
-    $(function () {
-        
-        
-        
+    $(function () {        
+        $("#formIndex").submit(function (event) {
+            event.preventDefault();
+            var data = $("form").serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "session_start.php",
+                data: data,
+                dataType: "json",
+                success: function (data) {
+                    if (data.status) {
+                        location.href = "index_area_cliente.php";
+                    }else{
+                        location.href = "index.php";
+                        $("#error").html("Login ou senha não confere.").css("color", "#FF0000");
+                    }
+                }
+            });
+        });
     })
     
 </script>
 </body>
 </html>
+    
 
 <?php
 

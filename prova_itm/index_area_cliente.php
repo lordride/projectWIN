@@ -1,16 +1,11 @@
 <?php
-include "conexao_db.php";
+include_once "session_start.php";
 
-session_start();
+if($_SESSION['Cliente']){
 
-if((!isset ($_SESSION['documento']) == true) and (!isset ($_SESSION['senha']) == true))
-{
-    unset($_SESSION['documento']);
-    unset($_SESSION['senha']);
-    header('location:index.php');
-}else{
-    echo "hello";
+    print_r($_SESSION['Cliente']);
 }
+
 
 
 ?>

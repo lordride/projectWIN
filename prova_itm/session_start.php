@@ -1,34 +1,40 @@
 <?php
 
-include "objeto_cliente.php";
-
-
-
 session_start();
 
 
-if (isset($_POST['documento']) && isset($_POST['senha'])) {
+$arrResposta = array('status'=> 0);
 
+
+if (isset($_POST)){
+    
     $login = $_POST['documento'];
     $senha = $_POST['senha'];
 
+    $objCliente = validaLogin($login, $senha);
+
+    if( $objCliente != false){
+
+        if(isset ($_SESSION['CLIENTE_LOGADO']) ){
+            unset($_SESSION['CLIENTE_LOGADO']);
+        }
+
+        $_SESSION['CLIENTE_LOGADO'] = serialize($objCliente);
+    }else{
+
+        return "retonar aglo para redirecionar ao login";
+    }
 
 }
 
+echo json_encode($arrResposta);
 
 
 
 
-$resultado = mysqli_query("SELECT ID,DOCUMENTO,SENHA FROM CLIENTE WHERE DOCUMENTO = '$login' AND SENHA = '$senha'");
 
 
-if (mysqli_num_rows ($resultado) > 0){
 
-    $_SESSION['login'] = $login;
-    $_SESSION['senha'] = $senha;
-
-    print_r($_SESSION);
-}
 
 
 
