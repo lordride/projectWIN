@@ -127,8 +127,8 @@ include "objeto_cliente.php";
         $("#formCliente").submit(function(event) {
             event.preventDefault();
             var data = $("#formCliente").serialize();
-            $.post("dados_cliente.php",data, function (result) {
-                $("#div").html(result);
+            $.post("dados_cliente.php",data, function () {
+                alert("Dados enviados com sucesso!");
             });
         });
         //  MASCARA DE SENHA

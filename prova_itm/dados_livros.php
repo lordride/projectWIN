@@ -8,25 +8,26 @@ $autor = isset($_POST['autor'])? $_POST['autor']:'';
 
 $objAutor = new Autor($autor);
 
-if (!$objAutor->save($conexaoDB)){
-    echo "nao foi possivel salvar no banco";
+if ($objAutor->save($conexaoDB)){
+    echo "salvo com sucesso";
 }
-
 
 
 //  LIVRO
-$numeroObra = isset($_POST['numeroDaObra'])? $_POST['numeroDaObra']:'';
-$titulo = isset($_POST['titulo'])? $_POST['titulo']:'';
-$assunto = isset($_POST['assunto'])? $_POST['assunto']:'';
+if($objAutor->getId()) {
+
+    $numeroObra = isset($_POST['numeroDaObra']) ? $_POST['numeroDaObra'] : '';
+    $titulo = isset($_POST['titulo']) ? $_POST['titulo'] : '';
+    $assunto = isset($_POST['assunto']) ? $_POST['assunto'] : '';
 
 
-$objLivro = new Livro($numeroObra,$titulo,$assunto);
+    $objLivro = new Livro($numeroObra, $titulo, $assunto,'', $objAutor->getId());
 
-if (!$objLivro->save($conexaoDB)){
-    echo "nao foi possivel salvar no banco";
+    if ($objLivro->save($conexaoDB)) {
+        echo "salvo com sucesso";
+    }
+
 }
-
-
 
 
 

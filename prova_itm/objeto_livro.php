@@ -6,6 +6,24 @@ class Autor{
     private $nome;
     
     
+
+    public function Autor($nome){
+        $this->nome = $nome;
+    }
+
+    public function save($conexaoDB){
+
+        $query = "INSERT INTO AUTOR(NOME) VALUES ('{$this->getNome()}')";
+
+        if (mysqli_query($conexaoDB, $query)){
+            $this->id = mysqli_insert_id($conexaoDB);
+            return true;
+        }
+        return false;
+    }
+    
+    
+    
     public function getNome(){
         return $this->nome;
     }
@@ -20,16 +38,6 @@ class Autor{
     }
 
 
-    public function Autor($nome){
-        $this->nome = $nome;
-    }
-
-    public function save($conexaoDB){
-        
-        $query = "INSERT INTO AUTOR(NOME) VALUES ('{$this->getNome()}')";
-        
-        return mysqli_query($conexaoDB, $query);
-    }
 
 }
 
@@ -40,29 +48,32 @@ class Livro {
     private $numDaObra;
     private $titulo;
     private $assunto;
-    private $status;
     private $clienteId;
     private $autorId;
 
-    public function Livro($numDaObra,$titulo,$assunto){        
+    public function Livro($numDaObra,$titulo,$assunto,$clienteId,$autorId){
         $this->numDaObra = $numDaObra;
         $this->titulo = $titulo;
         $this->assunto = $assunto;
+        $this->clienteId = $clienteId;
+        $this->autorId = $autorId;
     }
 
     public function save($conexaoDB){
         
-        $query = "INSERT INTO LIVRO(NUM_DA_OBRA, TITULO, ASSUNTO) VALUES ('{$this->getNumDaObra()}','{$this->getTitulo()}','{$this->getAssunto()}')";
+        $query = "INSERT INTO LIVRO(NUM_DA_OBRA, TITULO, ASSUNTO,CLIENTE_ID,AUTOR_ID) VALUES ('{$this->getNumDaObra()}','{$this->getTitulo()}','{$this->getAssunto()}','','{$this->getAutorId()}')";
 
-        print_r($query);
-        
-        return mysqli_query($conexaoDB, $query);
+        if (mysqli_query($conexaoDB, $query)){
+            $this->autorId = mysqli_insert_id($conexaoDB);
+            return true;
+        }
+        return false;
     }
 
+    
+    
 //      GET
-    public function getAutorId(){
-        return $this->autorId;
-    }
+
     public function getId(){
         return $this->id;
     }
@@ -74,18 +85,16 @@ class Livro {
     }
     public function getAssunto(){
         return $this->assunto;
-    }
-    public function getStatus(){
-        return $this->status;
-    }
+    } 
     public function getClienteId(){
         return $this->clienteId;
     }
+    public function getAutorId(){
+        return $this->autorId;
+}
     
 //     SET
-    public function setAutorId($autorId){
-        $this->autorId = $autorId;
-    }
+    
     public function setId($id){
          $this->id = $id;
     }
@@ -98,13 +107,12 @@ class Livro {
     public function setAssunto($assunto){
          $this->assunto = $assunto;
     }
-    public function setStatus($status){
-         $this->status = $status;
-    }
     public function setClienteId($clienteId){
          $this->clienteId = $clienteId;
     }
-
+    public function setAutorId($autorId){
+        $this->autorId = $autorId;
+    }
 }
 
 

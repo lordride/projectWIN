@@ -35,11 +35,11 @@ class Cliente{
         $this->nome = $nome;
     }
     public function setTipo($tipo){
+
         if (!in_array($tipo, self::$TIPOS)){
 
             throw new Exception ("Este tipo de cliente não existe.");
         }
-
         $this->tipo = array_search($tipo, self::$TIPOS);
     }
     public function setDocumento($documento){
@@ -65,7 +65,6 @@ class Cliente{
            $this->id = mysqli_insert_id($conexaoDB);
             return true;
         }
-
         return false;
     }
 

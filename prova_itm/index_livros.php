@@ -1,12 +1,6 @@
 <?php
 include "objeto_livro.php";
 
-session_start();
-
-
-
-
-
 
 ?>
 <!DOCTYPE>
@@ -67,8 +61,8 @@ session_start();
      $("#formLivro").submit(function (event) {
             event.preventDefault();
          var data = $("#formLivro").serialize();
-         $.post("dados_livros.php",data, function (result) {
-              $("#result").html(result);
+         $.post("dados_livros.php",data, function () {   
+             alert("Dados enviados com sucesso!");
          });         
      });   
 

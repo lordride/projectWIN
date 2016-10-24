@@ -5,13 +5,13 @@ include "objeto_cliente.php";
 //  CLIENTES
 
     $nome = isset($_POST['nome'])? $_POST['nome']:'';
-    $tipo = isset($_POST['tipo'])? $_POST['tipo']:'';
     $documento = isset($_POST['doc'])? $_POST['doc']:'';
     $senha = isset($_POST['senha'])? $_POST['senha']:'';
+    $tipo = isset($_POST['tipo'])? $_POST['tipo']:'';
 
     $objCliente = new Cliente($nome,$tipo,$documento,$senha);
     if (!$objCliente->save($conexaoDB)){
-        echo "nao foi possivel salvar no banco";
+        echo "salvo com sucesso";
     }
 
 if ($objCliente->getId()){
@@ -27,7 +27,7 @@ if ($objCliente->getId()){
             $objContato = new Contato('Telefone',$value,'',$objCliente->getId());
     
             if (!$objContato->save($conexaoDB)){
-                echo "nao foi possivel salvar no banco";
+                echo "salvo com sucesso";
             }
         }
     }
@@ -41,7 +41,7 @@ if ($objCliente->getId()){
             $objContato = new Contato('Email',$value,'',$objCliente->getId());
     
             if (!$objContato->save($conexaoDB)){
-                echo "nao foi possivel salvar no banco";
+                echo "salvo com sucesso";
             }
         }
     }
