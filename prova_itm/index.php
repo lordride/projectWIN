@@ -37,9 +37,9 @@
         <a href="index.php"><input type="submit" id="cliente" value="Entrar" class="botao btn btn-primary"></a><br/><br/>
 
             <label for="cpfLogin">CPF:</label>
-            <input type="text" id="cpfLogin" class="form-control"><br/>
+            <input type="text" id="cpfLogin" class="form-control" name="documento"><br/>
             <label for="senha">Senha:</label>
-            <input type="text" id="senha" class="form-control"><br/><br/>
+            <input type="text" id="senha" class="form-control" name="senha"><br/><br/>
             <div id="error"></div>
         </div>
 
@@ -57,8 +57,7 @@
     $(function () {        
         $("#formIndex").submit(function (event) {
             event.preventDefault();
-            var data = $("form").serialize();
-
+            var data = $(this).serialize();
             $.ajax({
                 type: "POST",
                 url: "session_start.php",

@@ -13,7 +13,7 @@
 <body>
 
 
-<script src="js/jquery.mask.js" type="text/javascript"></script>
+<script src="../js/jquery.mask.js" type="text/javascript"></script>
 <script type="text/javascript">
 
 </script>

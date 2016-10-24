@@ -1,14 +1,13 @@
 <?php
 
+
 function validaLogin($login,$senha){
     
-    include_once "../conexao_db.php";
+    include_once "conexao_db.php";
 
-    // qu7ery
 
-    // se vier resultado, transforma em array
-    // responde o array
+/* @var $conexaoDB msqli */
 
-    return mysqli_query("SELECT ID,DOCUMENTO,SENHA FROM CLIENTE WHERE DOCUMENTO = '{$login}' AND SENHA = '{$senha}'");
+    return mysqli_query($conexaoDB,"SELECT DOCUMENTO,SENHA FROM CLIENTE WHERE DOCUMENTO = '{$login}' AND SENHA = '{$senha}'");
 }
 

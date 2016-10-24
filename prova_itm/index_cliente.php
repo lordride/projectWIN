@@ -72,7 +72,6 @@ include "objeto_cliente.php";
 <script type="text/javascript">
     function mascara() {
         $(".campoFone").mask("(99)-9999-99999");
-        $(".campoSenha").mask("99999999999999999999");
         $(".campoDocumento").mask("999.999.999-99");
     }
     $(function () {
@@ -131,21 +130,7 @@ include "objeto_cliente.php";
                 alert("Dados enviados com sucesso!");
             });
         });
-        //  MASCARA DE SENHA
-        $("#senha").keyup(function () {
-           var senha = $("#senha").val();
-            var digitos = senha.length;
-
-            if (digitos < 8){
-                $("#senhaLabel").html("Senha muito curta!").css("color","#FF6347");
-                $("#senha").css("background-color","#FF0000");
-                mascara();
-            }else{
-                $("#senhaLabel").html('');
-                $("#senha").css("background-color","#00FF7F");
-                mascara();
-            }
-        });
+        
         
 
     })

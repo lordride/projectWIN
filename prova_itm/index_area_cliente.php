@@ -1,9 +1,9 @@
 <?php
 include_once "session_start.php";
 
-if($_SESSION['Cliente']){
+if(isset($_SESSION['CLIENTE_LOGADO'])){
 
-    print_r($_SESSION['Cliente']);
+    print_r($_SESSION['CLIENTE_LOGADO']);
 }
 
 
