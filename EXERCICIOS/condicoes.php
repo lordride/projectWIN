@@ -1,7 +1,7 @@
 <?php
 //              INDEX 2
 //----------------------------------------------------------------------------
-//              CODIÇOES
+//                  CODIÇOES
 
 $numero = isset($_GET["numero"])?$_GET["numero"]:0;
 $oper = isset($_GET["oper"])?$_GET["oper"]:1;
